@@ -2,7 +2,7 @@
 
 This repository includes step-by-step guide including examples and real world scenario for each option from docs.ansible.com.   
 
-* [01 - Ansible Quickstart Guide](#ansible_quickstart_guide)
+* [01 - Ansible Quickstart Guide](ansible_quickstart_guide/README.md)
 * [02 - Ansible concepts](#ansible_concepts)
 * [03 - Getting Started](#getting_started)
 * [04 - How to build your inventory](#how_to_build_your_inventory)
