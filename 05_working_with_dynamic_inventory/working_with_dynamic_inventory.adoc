@@ -1,0 +1,33 @@
+:doctype: article
+:reproducible:
+:icons: font
+:iconsdir: /etc/asciidoc/images/icons
+:numbered:
+:sectlinks:
+:sectnums:
+:toc: left
+:toclevels: 3
+:tabsize: 8
+:numbered:
+:source-highlighter: rouge
+:experimental:
+
+== Working with dynamic inventory
+
+=== Inventory script example: Cobbler
+
+=== Inventory script example: AWS EC2
+
+=== Inventory script example: OpenStack
+
+==== Explicit use of OpenStack inventory script
+
+==== Implicit use of OpenStack inventory script
+
+==== Refreshing the cache
+
+=== Other inventory scripts
+
+=== Using inventory directories and multiple inventory sources
+
+=== Static groups of dynamic groups
