@@ -3,7 +3,7 @@
 This repository includes step-by-step guide including examples and real world scenario for each option from docs.ansible.com.   
 
 * [01 - Ansible Quickstart Guide](01_ansible_quickstart_guide/ansible_quickstart_guide.adoc)
-* [02 - Ansible concepts](#ansible_concepts)
+* [02 - Ansible concepts](02_ansible_concepts/ansible_concepts.adoc)
 * [03 - Getting Started](#getting_started)
 * [04 - How to build your inventory](#how_to_build_your_inventory)
 * [05 - Working with dynamic inventory](#working_with_dynamic_inventory)
