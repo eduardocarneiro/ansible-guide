@@ -1,0 +1,55 @@
+:doctype: article
+:reproducible:
+:icons: font
+:iconsdir: /etc/asciidoc/images/icons
+:numbered:
+:sectlinks:
+:sectnums:
+:toc: left
+:toclevels: 3
+:tabsize: 8
+:numbered:
+:source-highlighter: rouge
+:experimental:
+
+== How to build your inventory
+
+=== Inventory basics: formats, hosts, and groups
+
+==== Default groups
+
+default groups
+
+==== Hosts in multiple groups
+
+hosts in multiple groups
+
+==== Adding ranges of hosts
+
+=== Adding variables to inventory
+
+=== Assigning a variable to one machine: host variables
+
+==== Inventory aliases
+
+=== Assigning a variable to many machines: group variables
+
+==== Inheriting variable values: group variables for groups of groups
+
+=== Organizing host and group variables
+
+=== How variables are merged
+
+=== Using multiple inventory sources
+
+=== Connecting to hosts: behavioral inventory parameters
+
+==== Non-SSG connection types
+
+=== Inventory setup examples
+
+==== Example: One inventory per environment
+
+==== Example: Group by function
+
+==== Example: Group by location
