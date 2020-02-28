@@ -1,0 +1,47 @@
+:doctype: article
+:reproducible:
+:icons: font
+:iconsdir: /etc/asciidoc/images/icons
+:numbered:
+:sectlinks:
+:sectnums:
+:toc: left
+:toclevels: 3
+:tabsize: 8
+:numbered:
+:source-highlighter: rouge
+:experimental:
+
+== Getting Started
+
+=== Selecting machines from inventory
+
+==== Action: create a basic invetory
+
+Create a basic inventory
+
+==== Beyond the basics
+
+Beyond the basics
+
+=== Connecting to remote nodes
+
+==== Action: check your SSH connections
+
+check your SSH connections
+
+==== Beyond the basics
+
+beyond the basics
+
+=== Copying and executing modules
+
+==== Action: run your first Ansible commands
+
+run your first ansible commands
+
+==== Beyond: run your first Ansible commands
+
+run your first ansible commands
+
+=== Next steps
