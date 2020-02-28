@@ -1,0 +1,31 @@
+:doctype: article
+:reproducible:
+:icons: font
+:iconsdir: /etc/asciidoc/images/icons
+:numbered:
+:sectlinks:
+:sectnums:
+:toc: left
+:toclevels: 3
+:tabsize: 8
+:numbered:
+:source-highlighter: rouge
+:experimental:
+
+== Patterns: targeting hosts and groups 
+
+=== Using patterns
+
+=== Common patterns
+
+=== Limitations of patterns
+
+=== Advanced pattern options
+
+==== Using variables in patterns
+
+==== Using group position in patterns
+
+==== Using regexes in patterns
+
+=== Patterns and ansible-playbook flags
