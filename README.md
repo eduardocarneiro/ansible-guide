@@ -4,7 +4,7 @@ This repository includes step-by-step guide including examples and real world sc
 
 * [01 - Ansible Quickstart Guide](01_ansible_quickstart_guide/ansible_quickstart_guide.adoc)
 * [02 - Ansible concepts](02_ansible_concepts/ansible_concepts.adoc)
-* [03 - Getting Started](#getting_started)
+* [03 - Getting Started](03_getting_started/getting_started.adoc)
 * [04 - How to build your inventory](#how_to_build_your_inventory)
 * [05 - Working with dynamic inventory](#working_with_dynamic_inventory)
 * [06 - Patterns: targeting hosts and groups](#patterns_targeting_hosts_and_groups)
