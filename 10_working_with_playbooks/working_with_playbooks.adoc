@@ -1,0 +1,216 @@
+:doctype: article
+:reproducible:
+:icons: font
+:iconsdir: /etc/asciidoc/images/icons
+:numbered:
+:sectlinks:
+:sectnums:
+:toc: left
+:toclevels: 3
+:tabsize: 8
+:numbered:
+:source-highlighter: rouge
+:experimental:
+
+== Working with Playbooks
+
+=== Intro to Playbooks
+
+==== About Playbooks
+
+==== Playbooks Language Example
+
+==== Basics
+
+==== Action Shorthand
+
+==== Handlers: Running Operations On Change
+
+==== Executing A Playbook
+
+==== Ansible-Pull
+
+==== Linting playbooks
+
+==== Other playbook verification options
+
+=== Creating Reusable Playbooks
+
+==== Including and Importing
+
+==== Roles
+
+==== Dynamic vs. Static
+
+==== Differences Between Dynamic and Static
+
+==== Tradeoffs and Pitfalls Between Includes and Imports
+
+=== Using Variables
+
+==== Creating valid variable names
+
+==== Defining variables in inventory
+
+==== Defining variables in a playbook
+
+==== Defining variables in included files and roles
+
+==== Using variables with Jinja2
+
+==== Transforming variables with Jinja2 filters
+
+==== Hey wait, a YAML gotcha
+
+==== Variables discovered from systems: Facts
+
+==== Registering variables
+
+==== Accessing complex variable data
+
+==== Accessing information about other hosts with magic variables
+
+==== Defining variables in files
+
+==== Passing variables on the command line
+
+==== Variable precedence: Where should I put a variable?
+
+==== Using advanced variable syntax
+
+=== Tamplating (Jinja2)
+
+==== Filters
+
+==== Tests
+
+==== Lookups
+
+==== Python Version and Templating
+
+==== Get the current time
+
+=== Conditionals
+
+==== The When Statement
+
+==== Loops and Conditionals
+
+==== Loading in Custom Facts
+
+==== Applying 'when' to roles, imports, and includes
+
+==== Conditional Imports
+
+==== Selecting Files And Templates Based On Variables
+
+==== Register Variables
+
+==== Commonly Used Facts
+
+=== Loops
+
+==== Comparing loop and with_*
+
+==== Standard loops
+
+==== Registering variables with a loop
+
+==== Complex loops
+
+==== Ensuring list input for loop: query vs. lookup
+
+==== Adding controls to loops
+
+==== Migrating from with_X to Loop
+
+=== Blocks
+
+==== Blocks error handling
+
+=== Advanced Playbooks Features
+
+==== Understanding privilege escalation: become
+
+==== Asynchronous Actions and Polling
+
+==== Check Mode ('Dry Run')
+
+==== Playbook Debugger
+
+==== Delegation, Rolling Updates, and Local Actions
+
+==== Setting the Environment (and Working With Proxies)
+
+==== Working With Language-Specific Version Managers
+
+==== Error Handling In Playbooks
+
+==== Advanced Syntax
+
+==== Working With Plugins
+
+==== Prompts
+
+==== Tags
+
+==== Using Vault in playbooks
+
+==== Start and Step
+
+==== Playbook keywords
+
+==== Lookups
+
+==== Module defaults
+
+=== Controlling playbook execution: strategies and more
+
+==== Selecting a strategy
+
+==== Setting the number of forks
+
+==== Using keywords to control execution
+
+
+=== Best Practices
+
+==== Content Organization
+
+==== Staging vs Production
+
+==== Rolling Updates
+
+==== Always Mention The State
+
+==== Group By Roles 
+
+==== Operating System and Distribution Variance
+
+==== Bundling Ansible Modules With Playbooks
+
+==== Whitespace and Comments
+
+==== Always Names Tasks
+
+==== Keep It Simple
+
+==== Version Control
+
+==== Variable and Vaults
+
+=== Playbook Example: Continuous Delivery and Rolling Upgrades
+
+==== What is continuous Delivery?
+
+==== Site deployment
+
+==== Reusable content: roles
+
+==== Configuration: group variables
+
+==== The rolling upgrade
+
+==== Managing other load balancers
+
+==== Continuous delivery end-to-end
