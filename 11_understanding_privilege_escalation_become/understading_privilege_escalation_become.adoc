@@ -1,0 +1,22 @@
+== Understanding privilege escalation: become
+=== Using become
+==== Become directives
+==== Become connection variables
+==== Become command-line options
+=== Risks and limitations of become
+==== Risks of becoming an unprivileged user
+==== Not supported by all connection plugins
+==== Only one method may be enabled per host
+==== Privilege escalation must be general
+==== May not access environment variables populated by pamd_systemd
+=== Become and network automation
+==== Setting enable mode for all tasks
+===== Passwords for enable mode
+==== authorize and auth_pass
+=== Become and Windows
+==== Administrative rights
+==== Local service accounts
+==== Become without setting a password
+==== Accounts without a password
+==== Become flags for Windows
+==== Limitations of become on Windows
