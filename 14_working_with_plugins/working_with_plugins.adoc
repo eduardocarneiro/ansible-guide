@@ -1,0 +1,31 @@
+:doctype: article
+:reproducible:
+:icons: font
+:iconsdir: /etc/asciidoc/images/icons
+:numbered:
+:sectlinks:
+:sectnums:
+:toc: left
+:toclevels: 3
+:tabsize: 8
+:numbered:
+:source-highlighter: rouge
+:experimental:
+
+== Working With Plugins
+=== Action Plugins
+=== Become Plugins
+=== Cache Plugins
+=== Callback Plugins
+=== Cliconf Plugins
+=== Connection Plugins
+=== Httpapi Plugins
+=== Inventory Plugins
+=== Lookup Plugins
+=== Netconf Plugins
+=== Shell Plugins
+=== Strategy Plugins
+=== Vars Plugins
+=== Filters
+=== Tests
+=== Plugin Filter Configuration
