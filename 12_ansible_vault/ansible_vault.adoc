@@ -1,0 +1,19 @@
+== Ansible Vault
+=== What Can Be Encrypted With Vault
+==== File-level encryption
+==== Variable-level encryption
+=== Vault IDs and Multiple Vault Passwords
+=== Creating Encrypted Files
+=== Editing Encrypted Files
+=== Rekeying Encrypted Files
+=== Encrypting Unencrypted Files
+=== Decrypting Encrypted Files
+=== Viewing Encrypted Files
+=== Use encrypt_string to create encrypted variables to embed in yaml
+=== Providing Vault Passwords
+==== Labelling Vaults
+==== Multiple Vault Passwords
+=== Vault Password Client Scripts
+=== Speeding Up Vault Operations
+=== Vault Format
+=== Vault Payload Format 1.1 - 1.2
