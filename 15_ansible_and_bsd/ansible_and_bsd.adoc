@@ -1,0 +1,22 @@
+:doctype: article
+:reproducible:
+:icons: font
+:iconsdir: /etc/asciidoc/images/icons
+:numbered:
+:sectlinks:
+:sectnums:
+:toc: left
+:toclevels: 3
+:tabsize: 8
+:numbered:
+:source-highlighter: rouge
+:experimental:
+
+== Ansible and BSD
+=== Connecting to BSD nodes
+=== Bootstrapping BSD
+=== Setting the Python interpreter
+=== Which modules are available?
+=== Using BSD as the control node
+=== BSD facts
+=== BSD efforts and contributions
