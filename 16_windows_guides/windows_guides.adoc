@@ -1,0 +1,57 @@
+:doctype: article
+:reproducible:
+:icons: font
+:iconsdir: /etc/asciidoc/images/icons
+:numbered:
+:sectlinks:
+:sectnums:
+:toc: left
+:toclevels: 3
+:tabsize: 8
+:numbered:
+:source-highlighter: rouge
+:experimental:
+
+== Windows Guides
+=== Setting up a Windows Host
+==== Host Requirements
+==== WinRM Setup
+==== Windows SSH Setup
+=== Windows Remote Management
+==== What is WinRM?
+==== Authentication Options
+==== Non-Administrator Accounts
+==== WinRM Encryption
+==== Inventory Options
+==== IPv6 Addresses
+==== HTTPS Certificate Validation
+==== TLS 1.2 Support
+==== Limitations
+=== Using Ansible and Windows
+==== Use Cases
+==== Path Formatting for Windows
+==== Limitations
+==== Developing Windows Modules
+=== Desired State Configuration
+==== What is Desired State Configuration?
+==== Host Requirements
+==== Why Use DSC?
+==== How to Use DSC?
+==== Custom DSC Resources
+==== Examples
+=== Windows performance
+==== Optimise PowerShell performance to reduce Ansible task overhead
+==== Fix high-CPU-on-boot for VMs/cloud instances
+=== Windows Frequently Asked Questions
+==== Does Ansible work with Windows XP or Server 2003?
+==== Can I manage Windows Nano Server with Ansible?
+==== Can Ansible run on Windows?
+==== Can I use SSH keys to authenticate to Windows hosts?
+==== Why can I run a command locally that does not work under Ansible?
+==== This program won?t install on Windows with Ansible
+==== What Windows modules are available?
+==== Can I run Python modules on Windows hosts?
+==== Can I connect to Windows hosts over SSH?
+==== Why is connecting to a Windows host via SSH failing?
+==== Why are my credentials being rejected?
+==== Why am I getting an error SSL CERTIFICATE_VERIFY_FAILED?
