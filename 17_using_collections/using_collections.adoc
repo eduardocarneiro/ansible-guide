@@ -1,0 +1,21 @@
+:doctype: article
+:reproducible:
+:icons: font
+:iconsdir: /etc/asciidoc/images/icons
+:numbered:
+:sectlinks:
+:sectnums:
+:toc: left
+:toclevels: 3
+:tabsize: 8
+:numbered:
+:source-highlighter: rouge
+:experimental:
+
+== Using collections 
+=== Installing collections
+==== Installing collections with ansible-galaxy
+==== Installing an older version of a collection
+==== Install multiple collections with a requirements file
+==== Configuring the ansible-galaxy client
+=== Using collections in a Playbook
