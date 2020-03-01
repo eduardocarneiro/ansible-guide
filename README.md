@@ -12,7 +12,7 @@ This repository includes step-by-step guide including examples and real world sc
 * [08 - Connection methods and details](08_connection_methods_and_details/connection_methods_and_details.adoc)
 * [09 - Working with command line tools](09_working_with_command_line_tools/working_with_command_line_tools.adoc)
 * [10 - Working with Playbooks](10_working_with_playbooks/working_with_playbooks.adoc)
-* [11 - Understading privilege escalation: become](11_understanding_privilege_escalation_become/understanding_privilege_escalation_become.adoc)
+* [11 - Understanding privilege escalation: become](11_understanding_privilege_escalation_become/understanding_privilege_escalation_become.adoc)
 * [12 - Ansible Vault](12_ansible_vault/ansible_vault.adoc)
 * [13 - Working with Modules](13_working_with_modules/working_with_modules.adoc)
 * [14 - Working with Plugins](14_working_with_plugins/working_with_plugins.adoc)
