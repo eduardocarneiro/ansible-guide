@@ -1,0 +1,19 @@
+:doctype: article
+:reproducible:
+:icons: font
+:iconsdir: /etc/asciidoc/images/icons
+:numbered:
+:sectlinks:
+:sectnums:
+:toc: left
+:toclevels: 3
+:tabsize: 8
+:numbered:
+:source-highlighter: rouge
+:experimental:
+
+== Working With Modules
+=== Introduction to modules
+=== Return Values
+=== Module Maintenance & Support
+=== Module Index
