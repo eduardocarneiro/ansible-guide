@@ -306,9 +306,11 @@ new_nodes
         var: result 
 ----
 
- 
-
-
+. Let's play the playbook `checkports_send.yaml`.
++
+----
+[root@bastion v3]# ansible-playbook -i hosts.yml checkports_send.yaml
+---- 
 
 === Blocks
 
