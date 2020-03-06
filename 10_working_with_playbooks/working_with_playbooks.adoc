@@ -142,8 +142,9 @@ In this example we are going to have a bastion(ansible machine),two sources mach
 
 . Create the hosts iventory file 
 +
+[source,yaml]
+.[root@bastion v3]# cat hosts.yml 
 ----
-[root@bastion v3]# cat hosts.yml 
 [masters]
 host1.ansible-training.lab
 host2.ansible-training.lab
