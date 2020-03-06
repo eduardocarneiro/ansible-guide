@@ -124,6 +124,17 @@
 
 ==== Migrating from with_X to Loop
 
+With the release of Ansible 2.5 and later, the recommended way to perform loops is the use the new `loop` keyword instead of `with_X` style loops.
+
+Here, I am going to show how to convert `with_` style loops to `loop`.
+
+*with_list*
+
+`with_list` is directly replaced by `loop`
+image::img/with_list-loop.png[]
+
+
+
 === Blocks
 
 ==== Blocks error handling
