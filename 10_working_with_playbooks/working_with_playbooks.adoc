@@ -124,26 +124,6 @@
 
 ==== Migrating from with_X to Loop
 
-===== with_list
-
-===== with_items
-
-===== with_indexed_items
-
-===== with_flattened
-
-===== with_together
-
-===== with_dict
-
-===== with_sequence
-
-===== with_subelements
-
-===== with_nested/with_cartesian
-
-===== with_random_choice
-
 === Blocks
 
 ==== Blocks error handling
