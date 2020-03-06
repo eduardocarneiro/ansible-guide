@@ -131,7 +131,7 @@ Here, I am going to show how to convert `with_` style loops to `loop`.
 *with_list*
 
 `with_list` is directly replaced by `loop`
-image::{img}/with_list-loop.png[]
+image:./img/with_list-loop.png[]
 
 
 
