@@ -134,6 +134,44 @@ Here, I am going to show how to convert `with_` style loops to `loop`.
 
 image::img/with_list-loop.png[]
 
+REAL WORLD EXAMPLE:
+
+The problem is: We have a openshift cluster environment running on vlan 10, we need to add more app-nodes to the cluster, but the networking team said that there is no more available IPs on vlan 10, so the networking team had created a vlan 20. Between the both vlans there is a Firewall. 
+
+So, before add new app-nodes to the Openshift cluster we are going to create a Ansible playbook to solve this problem.
+
+In this example we are going to have a bastion(ansible machine),two sources machines and one target machine.
+
+. Create the hosts iventory file 
++
+----
+[root@bastion v3]# cat hosts.yml 
+[masters]
+host1.ansible-training.lab
+host2.ansible-training.lab
+
+[infras]
+
+[new_nodes]
+host3.ansible-training.lab
+
+[ocs]
+
+[all:children]
+masters
+infras
+new_nodes
+ocs
+
+[source:children]
+masters
+infras
+new_nodes
+----
+
+
+ 
+
 
 
 === Blocks
