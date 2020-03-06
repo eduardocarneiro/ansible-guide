@@ -136,11 +136,9 @@ image::img/with_list-loop.png[]
 
 REAL WORLD EXAMPLE:
 
-The problem is: We have a openshift cluster environment running on vlan 10, we need to add more app-nodes to the cluster, but the networking team said that there is no more available IPs on vlan 10, so the networking team had created a vlan 20. Between the both vlans there is a Firewall. 
+The problem is: We have a openshift cluster environment running on vlan 10, we need to add more app-nodes to the cluster, but the networking team said that there is no more available IPs on vlan 10, so the networking team had created a vlan 20. There is a Firewall between the vlans, before we start adding new app-nodes we are going to create an Ansible playbook to check the connectivity between the vlans.  
 
-So, before add new app-nodes to the Openshift cluster we are going to create a Ansible playbook to solve this problem.
-
-In this example we are going to have a bastion(ansible machine),two sources machines and one target machine.
+In this example we are going to have a bastion(ansible machine),two sources machines(masters) and one target machine(new_nodes).
 
 . Create the hosts iventory file 
 +
@@ -169,6 +167,143 @@ infras
 new_nodes
 ----
 
+. Create the playbook file called `checkports_send.yaml`.
++
+[source,yaml]
+.[root@bastion v3]# cat checkports_send.yaml
+----
+---                                                                                                                                                                                             
+- name: Required Tools installation                                                                                                                                                             
+  hosts: all                                                                                                                                                                                    
+  become: yes                                                                                                                                                                                   
+  become_user: root                                                                                                                                                                             
+  tasks:                                                                                                                                                                                        
+    - name: Install tools                                                                                                                                                                       
+      yum:                                                                                                                                                                                      
+        name: "{{ packages }}"
+      vars:                                                                                                                                                                                     
+        packages:                                                                                                                                                                               
+          - qperf                                                                                                                                                                               
+          - nc                                                                                                                                                                                  
+        state: latest                                                                                                                                                                           
+    - name: Open firewall ports for required tools                                                                                                                                              
+      firewalld:                                                                                                                                                                                
+        port: 19765/tcp                                                                                                                                                                         
+        permanent: no                                                                                                                                                                           
+        immediate: yes                                                                                                                                                                          
+        state: enabled                                                                                                                                                                          
+
+- name: Allow network ports 
+  hosts: new_nodes
+  become: yes
+  become_user: root
+  vars:
+    ports:
+      - 53/tcp
+      - 8053/tcp
+      - 9200/tcp
+      - 9300/tcp
+      - 2049/tcp
+      - 24007-24008/tcp
+      - 24010/tcp
+      - 3260/tcp
+      - 111/tcp
+      - 49152-49664/tcp
+      - 10250/tcp
+      - 4789/udp
+      - 8053/udp
+      - 53/udp
+  tasks:
+    - name: Open required TCP port {{ ports }}
+      firewalld:
+        permanent: no
+        immediate: yes
+        state: enabled
+        port: "{{ item }}"
+      with_items: "{{ ports }}"
+
+- name: create a fake network TCP ports 
+  hosts: new_nodes
+  vars:
+    ports:
+      - 53
+      - 8053
+      - 9200
+      - 9300
+      - 2049
+      - 24007
+      - 24008
+      - 24010
+      - 3260
+      - 111
+      - 10250
+      - 49152
+      - 49664
+  become: yes
+  become_user: root
+  tasks:
+    - name: Perform NC command to open a fake port
+      shell: nohup nc -4lk "{{ item  }}" &
+      with_items: "{{ ports }}"
+
+- name: Open network UDP ports 
+  hosts: new_nodes
+  vars:
+    ports:
+      - 4789
+      - 8053
+      - 53
+  become: yes
+  become_user: root
+  tasks:
+    - name: Perform NC command to open a fake port
+      shell: nohup nc -u -4l "{{ item  }}" &
+      with_items: "{{ ports }}"
+
+- name: Check all tcp ports
+  hosts: masters
+  become: yes
+  become_user: root
+  vars:
+    ports:
+      - 53
+      - 8053
+      - 9200
+      - 9300
+      - 2049
+      - 24007
+      - 24008
+      - 24010
+      - 3260
+      - 10250
+      - 22
+      - 49152
+      - 49664
+  tasks:
+    - name: Open required TCP port {{ ports }}
+      command: /usr/bin/nc -vz host3.ansible-training.lab "{{ item  }}"
+      register: result
+      with_items: "{{ ports }}"
+    - debug:
+        var: result 
+
+- name: Check all udp ports
+  hosts: masters
+  become: yes
+  become_user: root
+  vars:
+    ports:
+      - 4789
+      - 8053
+      - 53
+  tasks:
+    - name: Open required UDP port {{ ports }}
+      command: /usr/bin/nc -uvz host3.ansible-training.lab "{{ item  }}"
+      register: result
+      with_items: "{{ ports }}"
+    - debug:
+        var: result 
+----
 
  
 
